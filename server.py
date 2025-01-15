@@ -55,7 +55,7 @@ class SpeedTestServer:
         # Set up TCP socket
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         sock.bind(('', self.tcp_port))
-        sock.listen(100)
+        sock.listen(5)
 
         while self.running:
             client, addr = sock.accept()
